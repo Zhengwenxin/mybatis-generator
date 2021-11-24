@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+
+<generatorConfiguration>
+	<context id="testTables" targetRuntime="MyBatis3">
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection
+			driverClass="com.mysql.cj.jdbc.Driver"
+			connectionURL="jdbc:mysql://10.250.151.98:3306/ems?serverTimezone=Asia/Shanghai&amp;generateSimpleParameterMetadata=true&amp;useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;nullCatalogMeansCurrent=true"
+			userId="root" password="1234">
+		</jdbcConnection>
+		
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+	
+        <javaModelGenerator targetPackage="com.xxl.job.executor.ems.api.entity" targetProject="F:\dev\IDEAWorkSpace\xxl-job-ccr-new\xxl-job-executor-samples\etl-job-executor-ems\src\main\java">
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.xxl.job.executor.ems.api.mapper" targetProject="F:\dev\IDEAWorkSpace\xxl-job-ccr-new\xxl-job-executor-samples\etl-job-executor-ems\src\main\java">
+        </sqlMapGenerator>
+
+        <javaClientGenerator targetPackage="com.xxl.job.executor.ems.api.mapper" targetProject="F:\dev\IDEAWorkSpace\xxl-job-ccr-new\xxl-job-executor-samples\etl-job-executor-ems\src\main\java" type="XMLMAPPER">
+        </javaClientGenerator>
+
+<!--		<table tableName="cdm_air_station_team_month" domainObjectName="CdmAirStationTeamMonth" enableSelectByExample="true"-->
+<!--			   enableDeleteByExample="true" enableCountByExample="true"-->
+<!--			   enableUpdateByExample="true" selectByExampleQueryId="true">-->
+<!--			<property name="ignoreQualifiersAtRuntime" value="false"/>-->
+<!--			<property name="useActualColumnNames" value="false"/>-->
+<!--&lt;!&ndash;			<ignoreColumnsByRegex pattern="^SY_.*">&ndash;&gt;-->
+<!--&lt;!&ndash;			</ignoreColumnsByRegex>&ndash;&gt;-->
+<!--		</table>-->
+<!--		<table tableName="cdm_electricity_station_team_month" domainObjectName="CdmElectricityStationTeamMonth" enableSelectByExample="true"-->
+<!--			   enableDeleteByExample="true" enableCountByExample="true"-->
+<!--			   enableUpdateByExample="true" selectByExampleQueryId="true">-->
+<!--			<property name="ignoreQualifiersAtRuntime" value="false"/>-->
+<!--			<property name="useActualColumnNames" value="false"/>-->
+<!--			&lt;!&ndash;			<ignoreColumnsByRegex pattern="^SY_.*">&ndash;&gt;-->
+<!--			&lt;!&ndash;			</ignoreColumnsByRegex>&ndash;&gt;-->
+<!--		</table>-->
+<!--		<table tableName="cdm_pure_water_station_team_month" domainObjectName="CdmPureWaterStationTeamMonth" enableSelectByExample="true"-->
+<!--			   enableDeleteByExample="true" enableCountByExample="true"-->
+<!--			   enableUpdateByExample="true" selectByExampleQueryId="true">-->
+<!--			<property name="ignoreQualifiersAtRuntime" value="false"/>-->
+<!--			<property name="useActualColumnNames" value="false"/>-->
+<!--			&lt;!&ndash;			<ignoreColumnsByRegex pattern="^SY_.*">&ndash;&gt;-->
+<!--			&lt;!&ndash;			</ignoreColumnsByRegex>&ndash;&gt;-->
+<!--		</table>-->
+<!--		<table tableName="cdm_shiedling_gas_station_team_month" domainObjectName="CdmShiedlingGasStationTeamMonth" enableSelectByExample="true"-->
+<!--			   enableDeleteByExample="true" enableCountByExample="true"-->
+<!--			   enableUpdateByExample="true" selectByExampleQueryId="true">-->
+<!--			<property name="ignoreQualifiersAtRuntime" value="false"/>-->
+<!--			<property name="useActualColumnNames" value="false"/>-->
+<!--			&lt;!&ndash;			<ignoreColumnsByRegex pattern="^SY_.*">&ndash;&gt;-->
+<!--			&lt;!&ndash;			</ignoreColumnsByRegex>&ndash;&gt;-->
+<!--		</table>-->
+<!--		<table tableName="cdm_steam_station_team_month" domainObjectName="CdmSteamStationTeamMonth" enableSelectByExample="true"-->
+<!--			   enableDeleteByExample="true" enableCountByExample="true"-->
+<!--			   enableUpdateByExample="true" selectByExampleQueryId="true">-->
+<!--			<property name="ignoreQualifiersAtRuntime" value="false"/>-->
+<!--			<property name="useActualColumnNames" value="false"/>-->
+<!--			&lt;!&ndash;			<ignoreColumnsByRegex pattern="^SY_.*">&ndash;&gt;-->
+<!--			&lt;!&ndash;			</ignoreColumnsByRegex>&ndash;&gt;-->
+<!--		</table>-->
+<!--		<table tableName="ems_bd_point" domainObjectName="EmsBdPoint" enableSelectByExample="true"-->
+<!--			   enableDeleteByExample="true" enableCountByExample="true"-->
+<!--			   enableUpdateByExample="true" selectByExampleQueryId="true">-->
+<!--			<property name="ignoreQualifiersAtRuntime" value="false"/>-->
+<!--			<property name="useActualColumnNames" value="false"/>-->
+<!--			&lt;!&ndash;			<ignoreColumnsByRegex pattern="^SY_.*">&ndash;&gt;-->
+<!--			&lt;!&ndash;			</ignoreColumnsByRegex>&ndash;&gt;-->
+<!--		</table>-->
+
+<!--		<table tableName="ems_data_day" domainObjectName="EmsDataDay" enableSelectByExample="true"-->
+<!--			   enableDeleteByExample="true" enableCountByExample="true"-->
+<!--			   enableUpdateByExample="true" selectByExampleQueryId="true">-->
+<!--			<property name="ignoreQualifiersAtRuntime" value="false"/>-->
+<!--			<property name="useActualColumnNames" value="false"/>-->
+<!--			&lt;!&ndash;			<ignoreColumnsByRegex pattern="^SY_.*">&ndash;&gt;-->
+<!--			&lt;!&ndash;			</ignoreColumnsByRegex>&ndash;&gt;-->
+<!--		</table>-->
+<!--		<table tableName="ems_data_day_price" domainObjectName="EmsDataDayPrice" enableSelectByExample="true"-->
+<!--			   enableDeleteByExample="true" enableCountByExample="true"-->
+<!--			   enableUpdateByExample="true" selectByExampleQueryId="true">-->
+<!--			<property name="ignoreQualifiersAtRuntime" value="false"/>-->
+<!--			<property name="useActualColumnNames" value="false"/>-->
+<!--			&lt;!&ndash;			<ignoreColumnsByRegex pattern="^SY_.*">&ndash;&gt;-->
+<!--			&lt;!&ndash;			</ignoreColumnsByRegex>&ndash;&gt;-->
+<!--		</table>-->
+<!--		<table tableName="ems_data_half_hour" domainObjectName="EmsDataHalfHour" enableSelectByExample="true"-->
+<!--			   enableDeleteByExample="true" enableCountByExample="true"-->
+<!--			   enableUpdateByExample="true" selectByExampleQueryId="true">-->
+<!--			<property name="ignoreQualifiersAtRuntime" value="false"/>-->
+<!--			<property name="useActualColumnNames" value="false"/>-->
+<!--			&lt;!&ndash;			<ignoreColumnsByRegex pattern="^SY_.*">&ndash;&gt;-->
+<!--			&lt;!&ndash;			</ignoreColumnsByRegex>&ndash;&gt;-->
+<!--		</table>-->
+<!--		<table tableName="ems_data_hour" domainObjectName="EmsDataHour" enableSelectByExample="true"-->
+<!--			   enableDeleteByExample="true" enableCountByExample="true"-->
+<!--			   enableUpdateByExample="true" selectByExampleQueryId="true">-->
+<!--			<property name="ignoreQualifiersAtRuntime" value="false"/>-->
+<!--			<property name="useActualColumnNames" value="false"/>-->
+<!--			&lt;!&ndash;			<ignoreColumnsByRegex pattern="^SY_.*">&ndash;&gt;-->
+<!--			&lt;!&ndash;			</ignoreColumnsByRegex>&ndash;&gt;-->
+<!--		</table>-->
+		<table tableName="ems_data_real_time" domainObjectName="EmsDataRealTime" enableSelectByExample="true"
+			   enableDeleteByExample="true" enableCountByExample="true"
+			   enableUpdateByExample="true" selectByExampleQueryId="true">
+			<property name="ignoreQualifiersAtRuntime" value="false"/>
+			<property name="useActualColumnNames" value="false"/>
+			<!--			<ignoreColumnsByRegex pattern="^SY_.*">-->
+			<!--			</ignoreColumnsByRegex>-->
+		</table>
+
+	  </context>
+</generatorConfiguration>
